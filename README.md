@@ -8,3 +8,5 @@ That's all!
 
 I'm old!
 -Gerson.
+
+Ah, and dont forget to enable game filter + change ipset to "any"!
