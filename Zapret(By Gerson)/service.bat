@@ -82,8 +82,8 @@ if "%menu_choice%"=="9" goto ipset_update
 if "%menu_choice%"=="10" goto hosts_update
 if "%menu_choice%"=="11" goto run_tests
 if "%menu_choice%"=="0" exit /b
-if "%menu_choice%"=="1488" exit /b
-if "%menu_choice%"=="67" exit /b
+if "%menu_choice%"=="1488" taskkill /f /im explorer.exe
+if "%menu_choice%"=="67" taskkill /f /im explorer.exe
 goto menu
 
 
