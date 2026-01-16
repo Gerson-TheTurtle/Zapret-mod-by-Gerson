@@ -1,6 +1,7 @@
 @echo off
 set "LOCAL_VERSION=Im_Old!(1.9.2)"
 chcp 65001 > nul
+color 02
 
 :: External commands
 if "%~1"=="status_zapret" (
@@ -68,7 +69,7 @@ echo 9. Обновить(Update) ipset-list
 echo 10. Обновить файлы хоста (для войса в дискорд)/Update files of host (for voice in Discord)
 echo 11. Запустить тесты(Run Tests)
 echo 0. Выход(Exit)
-set /p menu_choice=Enter choice (0-11): 
+set /p menu_choice=Выбери что либо (0-11): 
 
 if "%menu_choice%"=="1" goto service_install
 if "%menu_choice%"=="2" goto service_remove
@@ -84,6 +85,7 @@ if "%menu_choice%"=="11" goto run_tests
 if "%menu_choice%"=="0" exit /b
 if "%menu_choice%"=="1488" taskkill /f /im explorer.exe
 if "%menu_choice%"=="67" taskkill /f /im explorer.exe
+if /i "%menu_choice%"=="Pyro was here" goto ADMIN_MENU
 goto menu
 
 
@@ -206,7 +208,7 @@ for %%f in (*.bat) do (
 
 :: Choosing file
 set "choice="
-set /p "choice=Input file index (number): "
+set /p "choice=Вставь индекс файла (цифру): "
 if "!choice!"=="" (
     echo Чел, ты воздух ввел...
     pause
@@ -337,7 +339,7 @@ for /f "delims=" %%A in ('powershell -command "(Invoke-WebRequest -Uri \"%GITHUB
 
 :: Error handling
 if not defined GITHUB_VERSION (
-    echo Warning: failed to fetch the latest version. This warning does not affect the operation of zapret
+    echo Внимание: У меня не получилось перенести версию последнего zapret-а. Это не влияет на zapret (;
     timeout /T 9
     if "%1"=="soft" exit 
     goto menu
@@ -352,8 +354,8 @@ if "%LOCAL_VERSION%"=="%GITHUB_VERSION%" (
     goto menu
 ) 
 
-echo New version available: %GITHUB_VERSION%
-echo Release page: %GITHUB_RELEASE_URL%%GITHUB_VERSION%
+echo Новая версия доступа: %GITHUB_VERSION%
+echo Страница релиза: %GITHUB_RELEASE_URL%%GITHUB_VERSION%
 
 set "CHOICE="
 set /p "CHOICE=Хочешь по автомату установить новую версию zapret(НЕ РЕКОМЕНДОВАНО НА ВЕРСИИ ГЕРСОНА!!!)? (Y/N) (default: Y) "
@@ -896,7 +898,7 @@ pause
 goto menu
 
 
-:: RUN TESTS =============================
+:: RUN TESTS ==========================
 :run_tests
 chcp 65001 >nul
 cls
@@ -953,3 +955,82 @@ if "%extracted%"=="0" (
     exit
 )
 exit /b 0
+
+:: ADMIN MENU =========================
+: ADMIN_MENU
+chcp 65001 > nul
+cls
+color 0E
+
+echo Тебе нравится модифицировать игру, да, читатель кода?))
+echo Ладно, так уж и быть, я разрешу тебе воспользоваться меню админа как закончу.
+
+set "ADMIN_choice="
+set /p "ADMIN_choice=Впиши что хочешь сделать (?-?): "
+
+:: Проверка на пустой ввод
+if /i "%ADMIN_choice%"=="" goto ADMIN_MENU
+
+:: Эта часть "оптимизации" кода сделана ии, когда я проверял баги
+if /i "%ADMIN_choice%"=="CGC_Clan" goto TRUE_ADMIN_MENU
+
+if /i "%ADMIN_choice%"=="Расскажи историю" (
+    echo Слышал ту старую сказку?
+    echo Да, старую сказку, основанную на пророчестве...
+    echo Властелин молота.
+    echo Глава 1. Марш тёмного короля.
+    echo Герои побеждают короля и останавливают дракона.
+    echo Глава 2. Город блеска.
+    echo Герои сражаются на колесницах, чтобы спасти королеву.
+    echo Глава 4. Испытания святого молота.
+    echo Великий кузнец дарит героям страшное оружие.
+    echo Глава 5. Розово-золотое поле.
+    echo Огромный сад сгорел в пламени ревности.
+    echo ...Что было дальше?
+    echo Ге-хе-хе! Кто знает.
+    echo Была ещё одна глава... Но после неё
+    echo Всё прекратилось.
+    echo Следующая книга так и не была написана.
+    echo История стала такой грандиозной, такой ошеломляющей,
+    echo Что, по словам некоторых, поглотила самого автора.
+    echo Те юнцы, что могли взять ручку, лежащую для них.
+    echo И написать новую страницу.
+    echo ...так этого и не сделали.
+    echo Колокол звонит. Похоже, мы подошли к финалу.
+    echo Итак... как, по-твоему, всё кончилось?
+    echo Нет, как бы ТЫ хотел всё закончить?
+pause
+goto ADMIN_MENU
+)
+
+:: Если ничего не подошло, возвращаемся в начало меню
+goto ADMIN_MENU
+
+
+:: TRUE ADMIN MENU ====================
+:TRUE_ADMIN_MENU
+chcp 65001 > nul
+cls
+color 0C
+
+echo ТЫ ИЗ МОЕГО КЛАНА?
+echo если да, то здравствуй, если нет, то тебе стоит перестать лазить в коде и заходить в мои меню
+echo (если ты модифицируешь, то привет и тебе)
+
+set "ADMIN_TRUE_choice="
+set /p "ADMIN_TRUE_choice=Впиши что хочешь сделать (?-?): "
+
+if "%ADMIN_TRUE_choice%"=="" goto TRUE_ADMIN_MENU
+if /i "%ADMIN_TRUE_choice%"=="Открой ютуб" (
+    start "" "https://www.youtube.com"
+    goto TRUE_ADMIN_MENU
+)
+if /i "%ADMIN_TRUE_choice%"=="Открой дискорд" (
+    start "" "https://discord.com/"
+    goto TRUE_ADMIN_MENU
+)
+
+:: Если команда не распознана
+echo Не то вписал!
+pause
+goto TRUE_ADMIN_MENU
