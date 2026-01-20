@@ -1,5 +1,5 @@
 @echo off
-set "LOCAL_VERSION=Im_Old!(1.9.2)"
+set "LOCAL_VERSION=Im_Old!(1.9.3)"
 chcp 65001 > nul
 color 02
 
@@ -56,19 +56,33 @@ set "menu_choice=null"
 
 chcp 65001 > nul
 color 02
-echo =========  v.!LOCAL_VERSION!  =========
-echo 1. Скачать сервис(Install Service)
-echo 2. Удалить сервис(Delete Service)
-echo 3. Проверить Статус(Check Status)
-echo 4. Запустить Диагностику(Run Diagnostics)
-echo 5. Проверить Обновы(Check Updates)
-echo 6. Сменить проверку обнов(Switch Check Updates) (%CheckUpdatesStatus%)
-echo 7. Поменять(Switch) Game Filter (%GameFilterStatus%)
-echo 8. Поменять(Switch) ipset (%IPsetStatus%)
-echo 9. Обновить(Update) ipset-list
-echo 10. Обновить файлы хоста (для войса в дискорд)/Update files of host (for voice in Discord)
-echo 11. Запустить тесты(Run Tests)
-echo 0. Выход(Exit)
+echo.
+echo   ZAPRET SERVICE MANAGER v!LOCAL_VERSION!
+echo   ----------------------------------------
+echo.
+echo   :: SERVICE
+echo      1. Install Service
+echo      2. Remove Services
+echo      3. Check Status
+echo.
+echo   :: SETTINGS
+echo      4. Game Filter         [!GameFilterStatus!]
+echo      5. IPSet Filter        [!IPsetStatus!]
+echo      6. Auto-Update Check   [!CheckUpdatesStatus!]
+echo.
+echo   :: UPDATES
+echo      7. Update IPSet List
+echo      8. Update Hosts File
+echo      9. Check for Updates
+echo.
+echo   :: TOOLS
+echo      10. Run Diagnostics
+echo      11. Run Tests
+echo.
+echo   ----------------------------------------
+echo      0. Exit
+echo.
+
 set /p menu_choice=Выбери что либо (0-11): 
 
 if "%menu_choice%"=="1" goto service_install
@@ -185,6 +199,7 @@ goto menu
 
 
 :: INSTALL =============================
+:: ДАЖЕ НЕ ПЫТАЙТЕСЬ ПОНЯТЬ ЭТОТ ФРАГМЕНТ КОДА, ОН ХУЖЕ КИТАЙСКОГО
 :service_install
 cls
 chcp 65001 > nul
@@ -195,29 +210,26 @@ set "BIN_PATH=%~dp0bin\"
 set "LISTS_PATH=%~dp0lists\"
 
 :: Searching for .bat files in current folder, except files that start with "service"
-echo Выбери какой либо батник:
+echo Выбери что нибудь:
 set "count=0"
-for %%f in (*.bat) do (
-    set "filename=%%~nxf"
-    if /i not "!filename:~0,7!"=="service" (
-        set /a count+=1
-        echo !count!. %%f
-        set "file!count!=%%f"
-    )
+for /f "delims=" %%F in ('powershell -NoProfile -Command "Get-ChildItem -LiteralPath '.' -Filter '*.bat' | Where-Object { $_.Name -notlike 'service*' } | Sort-Object { [Regex]::Replace($_.Name, '(\d+)', { $args[0].Value.PadLeft(8, '0') }) } | ForEach-Object { $_.Name }"') do (
+    set /a count+=1
+    echo !count!. %%F
+    set "file!count!=%%F"
 )
 
 :: Choosing file
 set "choice="
-set /p "choice=Вставь индекс файла (цифру): "
+set /p "choice=Input file index (number): "
 if "!choice!"=="" (
-    echo Чел, ты воздух ввел...
+    echo Ты ничего не выбрал...
     pause
     goto menu
 )
 
 set "selectedFile=!file%choice%!"
 if not defined selectedFile (
-    echo Такого альта нет, братиш.
+    echo Это не один из батников...
     pause
     goto menu
 )
@@ -307,7 +319,7 @@ call :tcp_enable
 
 set ARGS=%args%
 call set "ARGS=%%ARGS:EXCL_MARK=^!%%"
-echo Final args: !ARGS!
+echo Финальные арги(или последние я хз): !ARGS!
 set SRVCNAME=zapret
 
 net stop %SRVCNAME% >nul 2>&1
@@ -335,11 +347,11 @@ set "GITHUB_RELEASE_URL=https://github.com/Flowseal/zapret-discord-youtube/relea
 set "GITHUB_DOWNLOAD_URL=https://github.com/Flowseal/zapret-discord-youtube/releases/latest/download/zapret-discord-youtube-"
 
 :: Get the latest version from GitHub
-for /f "delims=" %%A in ('powershell -command "(Invoke-WebRequest -Uri \"%GITHUB_VERSION_URL%\" -Headers @{\"Cache-Control\"=\"no-cache\"} -UseBasicParsing -TimeoutSec 5).Content.Trim()" 2^>nul') do set "GITHUB_VERSION=%%A"
+for /f "delims=" %%A in ('powershell -NoProfile -Command "(Invoke-WebRequest -Uri \"%GITHUB_VERSION_URL%\" -Headers @{\"Cache-Control\"=\"no-cache\"} -UseBasicParsing -TimeoutSec 5).Content.Trim()" 2^>nul') do set "GITHUB_VERSION=%%A"
 
 :: Error handling
 if not defined GITHUB_VERSION (
-    echo Внимание: У меня не получилось перенести версию последнего zapret-а. Это не влияет на zapret (;
+    echo Warning: failed to fetch the latest version. This warning does not affect the operation of zapret
     timeout /T 9
     if "%1"=="soft" exit 
     goto menu
@@ -347,23 +359,23 @@ if not defined GITHUB_VERSION (
 
 :: Version comparison
 if "%LOCAL_VERSION%"=="%GITHUB_VERSION%" (
-    echo Эта версия: %LOCAL_VERSION%
+    echo Latest version installed: %LOCAL_VERSION%
     
     if "%1"=="soft" exit 
     pause
     goto menu
 ) 
 
-echo Новая версия доступа: %GITHUB_VERSION%
-echo Страница релиза: %GITHUB_RELEASE_URL%%GITHUB_VERSION%
+echo New version available: %GITHUB_VERSION%
+echo Release page: %GITHUB_RELEASE_URL%%GITHUB_VERSION%
 
 set "CHOICE="
-set /p "CHOICE=Хочешь по автомату установить новую версию zapret(НЕ РЕКОМЕНДОВАНО НА ВЕРСИИ ГЕРСОНА!!!)? (Y/N) (default: Y) "
-if "%CHOICE%"=="" set "CHOICE=Y"
+set /p "CHOICE=Хочешь по автомату скачать новую версию(НЕ КАЧАЙ НА МОДИФИКАЦИИ)? (Y/N) (Дефолт: N) "
+if "%CHOICE%"=="" set "CHOICE=N"
 if /i "%CHOICE%"=="y" set "CHOICE=Y"
 
 if /i "%CHOICE%"=="Y" (
-    echo Opening the download page...
+    echo Открываю скачанную страницу...
     start "" "%GITHUB_DOWNLOAD_URL%%GITHUB_VERSION%.rar"
 )
 
