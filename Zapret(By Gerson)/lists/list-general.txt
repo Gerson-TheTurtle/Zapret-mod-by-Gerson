@@ -260,5 +260,4 @@ x.la
 x.org
 sitechecker.pro
 fandom.com
-mushroom-testing-facilityy.fandom.com
-mushroomtesting.miraheze.org
+google.com
