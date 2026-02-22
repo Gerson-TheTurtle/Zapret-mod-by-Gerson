@@ -243,6 +243,7 @@ ffzap.com
 betterttv.net
 7tv.app
 7tv.io
+localizeapi.com
 github.com
 gist.github.com
 docs.github.com
