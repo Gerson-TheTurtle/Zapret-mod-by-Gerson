@@ -78,12 +78,13 @@ echo.
 echo   :: Инструменты
 echo      10. Запустить диагностику
 echo      11. Запустить тестировку
+echo      12. Открыть сайты("ручная диагностика")
 echo.
 echo   ----------------------------------------
 echo      0. Выход
 echo.
 
-set /p menu_choice=   Выбери что либо (0-11): 
+set /p menu_choice=   Выбери что либо (0-12): 
 
 if "%menu_choice%"=="1" goto service_install
 if "%menu_choice%"=="2" goto service_remove
@@ -96,6 +97,7 @@ if "%menu_choice%"=="8" goto hosts_update
 if "%menu_choice%"=="9" goto service_check_updates
 if "%menu_choice%"=="10" goto service_diagnostics
 if "%menu_choice%"=="11" goto run_tests
+if "%menu_choice%"=="12" goto Manual_tests
 if "%menu_choice%"=="0" exit /b
 goto menu
 
@@ -634,12 +636,12 @@ if !found_any_conflict!==1 (
 )
 
 :: Discord cache clearing
-set "CHOICE="
+set "DsCHOICE="
 set /p "CHOICE=Хочешь удалить кэш дискорда? (Y/N) (default: Y)  "
-if "!CHOICE!"=="" set "CHOICE=Y"
-if /i "!CHOICE!"=="Y" set "CHOICE=Y"
+if "!CHOICE!"=="" set "DsCHOICE=Y"
+if /i "!CHOICE!"=="Y" set "DsCHOICE=Y"
 
-if /i "!CHOICE!"=="Y" (
+if /i "!DsCHOICE!"=="Y" (
     tasklist /FI "IMAGENAME eq Discord.exe" | findstr /I "Discord.exe" > nul
     if !errorlevel!==0 (
         echo Закрываю дс(он включен)...
@@ -900,7 +902,7 @@ goto menu
 
 :: RUN TESTS =============================
 :run_tests
-chcp 65001 >nul
+chcp 65001 > nul
 cls
 
 :: Require PowerShell 3.0+
@@ -955,3 +957,82 @@ if "%extracted%"=="0" (
     exit
 )
 exit /b 0
+
+::Manual_tests ===========================
+:Manual_tests
+chcp 65001 > nul
+cls
+
+echo           ЭТО ПРИКОЛ КАКОЙ-ТО
+echo -------------------------------------
+echo.
+echo        •Мануальные тесты•
+echo.
+echo    1. •Открыть ютуб•
+echo.
+echo    2. •Открыть дискорд•
+echo.
+echo    3. •Открыть роблоха•
+echo.
+echo    4. •Открыть телеграмм•
+echo.
+echo    5. •Открыть гитхаб•
+echo.
+echo    0. •Меню•
+echo.
+
+set /p Opening_smth_choice= Выбирай☺ (0-5): 
+
+:: Это все работает на "если ошибок нет, то открыть, если есть - не открывать"
+if "%Opening_smth_choice%"=="1" (
+if errorlevel 0 (
+start https://www.youtube.com
+echo Открыл!
+) else (
+echo Не получилось
+)
+pause
+goto Manual_tests
+)
+if "%Opening_smth_choice%"=="2" (
+if errorlevel 0 (
+start https://discord.com
+echo Открыл!
+) else (
+echo Не получилось
+)
+pause
+goto Manual_tests
+)
+if "%Opening_smth_choice%"=="3" (
+if errorlevel 0 (
+start https://roblox.com
+echo Открыл!
+) else (
+echo Не получилось
+)
+pause
+goto Manual_tests
+)
+if "%Opening_smth_choice%"=="4" (
+if errorlevel 0 (
+start https://t.me
+echo Открыл!
+) else (
+echo Не получилось
+)
+pause
+goto Manual_tests
+)
+if "%Opening_smth_choice%"=="5" (
+if errorlevel 0 (
+start https://github.com
+echo Открыл!
+) else (
+echo Не получилось
+)
+pause
+goto Manual_tests
+)
+if "%Opening_smth_choice%"=="0" goto menu
+goto Manual_tests

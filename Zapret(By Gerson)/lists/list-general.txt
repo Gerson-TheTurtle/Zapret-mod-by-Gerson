@@ -213,6 +213,7 @@ cloudflarestatus.com
 cloudflarestorage.com
 cloudflarestream.com
 cloudflaretest.com
+cdn.discordapp.com
 dis.gd
 discord-attachments-uploads-prd.storage.googleapis.com
 discord.app
@@ -261,3 +262,10 @@ x.org
 sitechecker.pro
 fandom.com
 google.com
+aka.ms/vs
+sublimetext.com
+download.opr.gg
+florr.io
+florr-io.pages.dev
+github.io
+muzegames.com
