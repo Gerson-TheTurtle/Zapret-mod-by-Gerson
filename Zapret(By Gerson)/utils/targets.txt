@@ -41,3 +41,9 @@ RobloxInGame          = "https://gamejoin.roblox.com"
 ### Florr Io
 FlorrIo               = "https://florr.io"
 M28                   = "https://m28.io"
+
+### Arras Io
+ArrasIo              = "https://arras.io"
+
+### R34
+R34                  = "https://xxx.rule34.com

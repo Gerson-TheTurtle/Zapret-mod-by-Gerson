@@ -1,0 +1,111 @@
+﻿
+Config: general (ALT).bat (Type: standard)
+  UNKNOWN : HTTP:ERROR | Ping: Timeout
+  DiscordGateway : HTTP:ERROR TLS1.2:ERROR TLS1.3:ERROR | Ping: Timeout
+  DiscordCDN : HTTP:ERROR TLS1.2:ERROR TLS1.3:ERROR | Ping: Timeout
+  DiscordUpdates : HTTP:ERROR TLS1.2:ERROR TLS1.3:ERROR | Ping: Timeout
+  YouTubeWeb : HTTP:ERROR TLS1.2:ERROR TLS1.3:ERROR | Ping: Timeout
+  YouTubeShort : HTTP:ERROR TLS1.2:ERROR TLS1.3:ERROR | Ping: Timeout
+  YouTubeImage : HTTP:ERROR TLS1.2:ERROR TLS1.3:ERROR | Ping: Timeout
+  YouTubeVideoRedirect : HTTP:ERROR TLS1.2:ERROR TLS1.3:ERROR | Ping: Timeout
+  GoogleMain : HTTP:ERROR TLS1.2:ERROR TLS1.3:ERROR | Ping: Timeout
+  GoogleGstatic : HTTP:ERROR TLS1.2:ERROR TLS1.3:ERROR | Ping: Timeout
+  CloudflareWeb : HTTP:ERROR TLS1.2:ERROR TLS1.3:ERROR | Ping: Timeout
+  CloudflareCDN : HTTP:ERROR TLS1.2:ERROR TLS1.3:ERROR | Ping: Timeout
+  CloudflareDNS1111 :  | Ping: Timeout
+  CloudflareDNS1001 :  | Ping: Timeout
+  GoogleDNS8888 :  | Ping: Timeout
+  GoogleDNS8844 :  | Ping: Timeout
+  Quad9DNS9999 :  | Ping: Timeout
+  Roblox : HTTP:ERROR TLS1.2:ERROR TLS1.3:ERROR | Ping: Timeout
+  RobloxInGame : HTTP:ERROR TLS1.2:ERROR TLS1.3:ERROR | Ping: Timeout
+  FlorrIo : HTTP:ERROR TLS1.2:ERROR TLS1.3:ERROR | Ping: Timeout
+  M28 : HTTP:ERROR TLS1.2:ERROR TLS1.3:ERROR | Ping: Timeout
+  ArrasIo : HTTP:ERROR TLS1.2:ERROR TLS1.3:ERROR | Ping: Timeout
+  ScenexeIo : HTTP:ERROR TLS1.2:ERROR TLS1.3:ERROR | Ping: Timeout
+  Smthforscenexeioidk : HTTP:ERROR TLS1.2:ERROR TLS1.3:ERROR | Ping: Timeout
+
+Config: general (ALT10).bat (Type: standard)
+  UNKNOWN : HTTP:ERROR | Ping: Timeout
+  DiscordGateway : HTTP:ERROR TLS1.2:ERROR TLS1.3:ERROR | Ping: Timeout
+  DiscordCDN : HTTP:ERROR TLS1.2:ERROR TLS1.3:ERROR | Ping: Timeout
+  DiscordUpdates : HTTP:ERROR TLS1.2:ERROR TLS1.3:ERROR | Ping: Timeout
+  YouTubeWeb : HTTP:ERROR TLS1.2:ERROR TLS1.3:ERROR | Ping: Timeout
+  YouTubeShort : HTTP:ERROR TLS1.2:ERROR TLS1.3:ERROR | Ping: Timeout
+  YouTubeImage : HTTP:ERROR TLS1.2:ERROR TLS1.3:ERROR | Ping: Timeout
+  YouTubeVideoRedirect : HTTP:ERROR TLS1.2:ERROR TLS1.3:ERROR | Ping: Timeout
+  GoogleMain : HTTP:ERROR TLS1.2:ERROR TLS1.3:ERROR | Ping: Timeout
+  GoogleGstatic : HTTP:ERROR TLS1.2:ERROR TLS1.3:ERROR | Ping: Timeout
+  CloudflareWeb : HTTP:ERROR TLS1.2:ERROR TLS1.3:ERROR | Ping: Timeout
+  CloudflareCDN : HTTP:ERROR TLS1.2:ERROR TLS1.3:ERROR | Ping: Timeout
+  CloudflareDNS1111 :  | Ping: Timeout
+  CloudflareDNS1001 :  | Ping: Timeout
+  GoogleDNS8888 :  | Ping: Timeout
+  GoogleDNS8844 :  | Ping: Timeout
+  Quad9DNS9999 :  | Ping: Timeout
+  Roblox : HTTP:ERROR TLS1.2:ERROR TLS1.3:ERROR | Ping: Timeout
+  RobloxInGame : HTTP:ERROR TLS1.2:ERROR TLS1.3:ERROR | Ping: Timeout
+  FlorrIo : HTTP:ERROR TLS1.2:ERROR TLS1.3:ERROR | Ping: Timeout
+  M28 : HTTP:ERROR TLS1.2:ERROR TLS1.3:ERROR | Ping: Timeout
+  ArrasIo : HTTP:ERROR TLS1.2:ERROR TLS1.3:ERROR | Ping: Timeout
+  ScenexeIo : HTTP:ERROR TLS1.2:ERROR TLS1.3:ERROR | Ping: Timeout
+  Smthforscenexeioidk : HTTP:ERROR TLS1.2:ERROR TLS1.3:ERROR | Ping: Timeout
+
+Config: general (ALT11).bat (Type: standard)
+  UNKNOWN : HTTP:ERROR | Ping: Timeout
+  DiscordGateway : HTTP:ERROR TLS1.2:ERROR TLS1.3:ERROR | Ping: Timeout
+  DiscordCDN : HTTP:ERROR TLS1.2:ERROR TLS1.3:ERROR | Ping: Timeout
+  DiscordUpdates : HTTP:ERROR TLS1.2:ERROR TLS1.3:ERROR | Ping: Timeout
+  YouTubeWeb : HTTP:ERROR TLS1.2:ERROR TLS1.3:ERROR | Ping: Timeout
+  YouTubeShort : HTTP:ERROR TLS1.2:ERROR TLS1.3:ERROR | Ping: Timeout
+  YouTubeImage : HTTP:ERROR TLS1.2:ERROR TLS1.3:ERROR | Ping: Timeout
+  YouTubeVideoRedirect : HTTP:ERROR TLS1.2:ERROR TLS1.3:ERROR | Ping: Timeout
+  GoogleMain : HTTP:ERROR TLS1.2:ERROR TLS1.3:ERROR | Ping: Timeout
+  GoogleGstatic : HTTP:ERROR TLS1.2:ERROR TLS1.3:ERROR | Ping: Timeout
+  CloudflareWeb : HTTP:ERROR TLS1.2:ERROR TLS1.3:ERROR | Ping: Timeout
+  CloudflareCDN : HTTP:ERROR TLS1.2:ERROR TLS1.3:ERROR | Ping: Timeout
+  CloudflareDNS1111 :  | Ping: Timeout
+  CloudflareDNS1001 :  | Ping: Timeout
+  GoogleDNS8888 :  | Ping: Timeout
+  GoogleDNS8844 :  | Ping: Timeout
+  Quad9DNS9999 :  | Ping: Timeout
+  Roblox : HTTP:ERROR TLS1.2:ERROR TLS1.3:ERROR | Ping: Timeout
+  RobloxInGame : HTTP:ERROR TLS1.2:ERROR TLS1.3:ERROR | Ping: Timeout
+  FlorrIo : HTTP:ERROR TLS1.2:ERROR TLS1.3:ERROR | Ping: Timeout
+  M28 : HTTP:ERROR TLS1.2:ERROR TLS1.3:ERROR | Ping: Timeout
+  ArrasIo : HTTP:ERROR TLS1.2:ERROR TLS1.3:ERROR | Ping: Timeout
+  ScenexeIo : HTTP:ERROR TLS1.2:ERROR TLS1.3:ERROR | Ping: Timeout
+  Smthforscenexeioidk : HTTP:ERROR TLS1.2:ERROR TLS1.3:ERROR | Ping: Timeout
+
+Config: general (FAKE TLS AUTO).bat (Type: standard)
+  UNKNOWN : HTTP:ERROR | Ping: Timeout
+  DiscordGateway : HTTP:ERROR TLS1.2:ERROR TLS1.3:ERROR | Ping: Timeout
+  DiscordCDN : HTTP:ERROR TLS1.2:ERROR TLS1.3:ERROR | Ping: Timeout
+  DiscordUpdates : HTTP:ERROR TLS1.2:ERROR TLS1.3:ERROR | Ping: Timeout
+  YouTubeWeb : HTTP:ERROR TLS1.2:ERROR TLS1.3:ERROR | Ping: Timeout
+  YouTubeShort : HTTP:ERROR TLS1.2:ERROR TLS1.3:ERROR | Ping: Timeout
+  YouTubeImage : HTTP:ERROR TLS1.2:ERROR TLS1.3:ERROR | Ping: Timeout
+  YouTubeVideoRedirect : HTTP:ERROR TLS1.2:ERROR TLS1.3:ERROR | Ping: Timeout
+  GoogleMain : HTTP:ERROR TLS1.2:ERROR TLS1.3:ERROR | Ping: Timeout
+  GoogleGstatic : HTTP:ERROR TLS1.2:ERROR TLS1.3:ERROR | Ping: Timeout
+  CloudflareWeb : HTTP:ERROR TLS1.2:ERROR TLS1.3:ERROR | Ping: Timeout
+  CloudflareCDN : HTTP:ERROR TLS1.2:ERROR TLS1.3:ERROR | Ping: Timeout
+  CloudflareDNS1111 :  | Ping: Timeout
+  CloudflareDNS1001 :  | Ping: Timeout
+  GoogleDNS8888 :  | Ping: Timeout
+  GoogleDNS8844 :  | Ping: Timeout
+  Quad9DNS9999 :  | Ping: Timeout
+  Roblox : HTTP:ERROR TLS1.2:ERROR TLS1.3:ERROR | Ping: Timeout
+  RobloxInGame : HTTP:ERROR TLS1.2:ERROR TLS1.3:ERROR | Ping: Timeout
+  FlorrIo : HTTP:ERROR TLS1.2:ERROR TLS1.3:ERROR | Ping: Timeout
+  M28 : HTTP:ERROR TLS1.2:ERROR TLS1.3:ERROR | Ping: Timeout
+  ArrasIo : HTTP:ERROR TLS1.2:ERROR TLS1.3:ERROR | Ping: Timeout
+  ScenexeIo : HTTP:ERROR TLS1.2:ERROR TLS1.3:ERROR | Ping: Timeout
+  Smthforscenexeioidk : HTTP:ERROR TLS1.2:ERROR TLS1.3:ERROR | Ping: Timeout
+
+=== ANALYTICS ===
+general (ALT11).bat : HTTP OK: 0, ERR: 55, UNSUP: 0, Ping OK: 0, Fail: 24
+general (ALT).bat : HTTP OK: 0, ERR: 55, UNSUP: 0, Ping OK: 0, Fail: 24
+general (ALT10).bat : HTTP OK: 0, ERR: 55, UNSUP: 0, Ping OK: 0, Fail: 24
+general (FAKE TLS AUTO).bat : HTTP OK: 0, ERR: 55, UNSUP: 0, Ping OK: 0, Fail: 24
+Best strategy: general (ALT11).bat

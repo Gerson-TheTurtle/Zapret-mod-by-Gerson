@@ -1,0 +1,57 @@
+﻿
+Config: general (ALT10).bat (Type: standard)
+  UNKNOWN : HTTP:ERROR | Ping: Timeout
+  DiscordGateway : HTTP:ERROR TLS1.2:ERROR TLS1.3:UNSUP | Ping: Timeout
+  DiscordCDN : HTTP:ERROR TLS1.2:ERROR TLS1.3:UNSUP | Ping: Timeout
+  DiscordUpdates : HTTP:ERROR TLS1.2:ERROR TLS1.3:UNSUP | Ping: Timeout
+  YouTubeWeb : HTTP:OK    TLS1.2:OK    TLS1.3:UNSUP | Ping: 200 ms
+  YouTubeShort : HTTP:OK    TLS1.2:OK    TLS1.3:UNSUP | Ping: 170 ms
+  YouTubeImage : HTTP:OK    TLS1.2:OK    TLS1.3:UNSUP | Ping: 169 ms
+  YouTubeVideoRedirect : HTTP:OK    TLS1.2:OK    TLS1.3:UNSUP | Ping: 187 ms
+  GoogleMain : HTTP:OK    TLS1.2:OK    TLS1.3:UNSUP | Ping: 162 ms
+  GoogleGstatic : HTTP:OK    TLS1.2:OK    TLS1.3:UNSUP | Ping: 161 ms
+  CloudflareWeb : HTTP:ERROR TLS1.2:ERROR TLS1.3:UNSUP | Ping: Timeout
+  CloudflareCDN : HTTP:ERROR TLS1.2:ERROR TLS1.3:UNSUP | Ping: 143 ms
+  CloudflareDNS1111 :  | Ping: 169 ms
+  CloudflareDNS1001 :  | Ping: 169 ms
+  GoogleDNS8888 :  | Ping: 160 ms
+  GoogleDNS8844 :  | Ping: 166 ms
+  Quad9DNS9999 :  | Ping: 176 ms
+  Roblox : HTTP:OK    TLS1.2:OK    TLS1.3:UNSUP | Ping: 261 ms
+  RobloxInGame : HTTP:OK    TLS1.2:OK    TLS1.3:UNSUP | Ping: 196 ms
+  FlorrIo : HTTP:OK    TLS1.2:OK    TLS1.3:UNSUP | Ping: 153 ms
+  M28 : HTTP:OK    TLS1.2:OK    TLS1.3:UNSUP | Ping: 151 ms
+  ArrasIo : HTTP:ERROR TLS1.2:ERROR TLS1.3:UNSUP | Ping: Timeout
+  ScenexeIo : HTTP:ERROR TLS1.2:ERROR TLS1.3:UNSUP | Ping: 159 ms
+  Smthforscenexeioidk : HTTP:OK    TLS1.2:OK    TLS1.3:UNSUP | Ping: 146 ms
+
+Config: general (ALT11).bat (Type: standard)
+  UNKNOWN : HTTP:ERROR | Ping: Timeout
+  DiscordGateway : HTTP:ERROR TLS1.2:ERROR TLS1.3:UNSUP | Ping: Timeout
+  DiscordCDN : HTTP:ERROR TLS1.2:ERROR TLS1.3:UNSUP | Ping: Timeout
+  DiscordUpdates : HTTP:ERROR TLS1.2:ERROR TLS1.3:UNSUP | Ping: Timeout
+  YouTubeWeb : HTTP:OK    TLS1.2:OK    TLS1.3:UNSUP | Ping: 149 ms
+  YouTubeShort : HTTP:OK    TLS1.2:OK    TLS1.3:UNSUP | Ping: 169 ms
+  YouTubeImage : HTTP:OK    TLS1.2:OK    TLS1.3:UNSUP | Ping: 181 ms
+  YouTubeVideoRedirect : HTTP:OK    TLS1.2:OK    TLS1.3:UNSUP | Ping: 174 ms
+  GoogleMain : HTTP:OK    TLS1.2:OK    TLS1.3:UNSUP | Ping: 155 ms
+  GoogleGstatic : HTTP:OK    TLS1.2:OK    TLS1.3:UNSUP | Ping: 158 ms
+  CloudflareWeb : HTTP:ERROR TLS1.2:ERROR TLS1.3:UNSUP | Ping: Timeout
+  CloudflareCDN : HTTP:ERROR TLS1.2:ERROR TLS1.3:UNSUP | Ping: 197 ms
+  CloudflareDNS1111 :  | Ping: 184 ms
+  CloudflareDNS1001 :  | Ping: 155 ms
+  GoogleDNS8888 :  | Ping: 208 ms
+  GoogleDNS8844 :  | Ping: 184 ms
+  Quad9DNS9999 :  | Ping: 182 ms
+  Roblox : HTTP:OK    TLS1.2:OK    TLS1.3:UNSUP | Ping: 314 ms
+  RobloxInGame : HTTP:OK    TLS1.2:OK    TLS1.3:UNSUP | Ping: 226 ms
+  FlorrIo : HTTP:OK    TLS1.2:OK    TLS1.3:UNSUP | Ping: 222 ms
+  M28 : HTTP:OK    TLS1.2:OK    TLS1.3:UNSUP | Ping: 158 ms
+  ArrasIo : HTTP:ERROR TLS1.2:ERROR TLS1.3:UNSUP | Ping: Timeout
+  ScenexeIo : HTTP:ERROR TLS1.2:ERROR TLS1.3:UNSUP | Ping: Timeout
+  Smthforscenexeioidk : HTTP:OK    TLS1.2:OK    TLS1.3:UNSUP | Ping: 164 ms
+
+=== ANALYTICS ===
+general (ALT11).bat : HTTP OK: 22, ERR: 15, UNSUP: 18, Ping OK: 17, Fail: 7
+general (ALT10).bat : HTTP OK: 22, ERR: 15, UNSUP: 18, Ping OK: 18, Fail: 6
+Best strategy: general (ALT10).bat

@@ -1,3 +1,4 @@
+arras.io
 roblox.com
 www.roblox.com
 auth.roblox.com
@@ -214,10 +215,12 @@ cloudflarestorage.com
 cloudflarestream.com
 cloudflaretest.com
 cdn.discordapp.com
+media.discordapp.net
 dis.gd
 discord-attachments-uploads-prd.storage.googleapis.com
 discord.app
 discord.co
+status.discord.com
 discord.com
 discord.design
 discord.dev
@@ -270,3 +273,9 @@ florr.io
 florr-io.pages.dev
 github.io
 muzegames.com
+arras.cx
+scenexe.io
+scenexe2.io
+elb.the-ozone-project.com
+woomy.online
+makerworld.com

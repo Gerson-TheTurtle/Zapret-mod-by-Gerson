@@ -408,9 +408,9 @@ function Read-ModeSelection {
     while ($true) {
         Write-Host ""
         Write-Host "Select test run mode:" -ForegroundColor Cyan
-        Write-Host "  [1] All configs" -ForegroundColor Gray
-        Write-Host "  [2] Selected configs" -ForegroundColor Gray
-        $choice = Read-Host "Enter 1 or 2"
+        Write-Host "  [1] Все конфиги" -ForegroundColor Gray
+        Write-Host "  [2] Выбранные конфиги" -ForegroundColor Gray
+        $choice = Read-Host "Введи 1 или 2"
         switch ($choice) {
             '1' { return 'all' }
             '2' { return 'select' }
