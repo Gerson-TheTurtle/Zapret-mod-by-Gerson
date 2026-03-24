@@ -636,8 +636,10 @@ if !found_any_conflict!==1 (
 )
 
 :: Discord cache clearing
+chcp 65001 > nul
+
 set "DsCHOICE="
-set /p "CHOICE=Хочешь удалить кэш дискорда? (Y/N) (default: Y)  "
+set /p "CHOICE=Хочешь удалить кэш дискорда? (Y/N) (По дефолту: Y)"
 if "!CHOICE!"=="" set "DsCHOICE=Y"
 if /i "!CHOICE!"=="Y" set "DsCHOICE=Y"
 

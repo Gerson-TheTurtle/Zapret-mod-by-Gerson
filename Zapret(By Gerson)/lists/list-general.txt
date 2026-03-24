@@ -215,12 +215,11 @@ cloudflarestorage.com
 cloudflarestream.com
 cloudflaretest.com
 cdn.discordapp.com
-media.discordapp.net
 dis.gd
 discord-attachments-uploads-prd.storage.googleapis.com
+storage.googleapis.com
 discord.app
 discord.co
-status.discord.com
 discord.com
 discord.design
 discord.dev
@@ -231,6 +230,7 @@ discord.media
 discord.new
 discord.store
 discord.status
+discord.tools
 discord-activities.com
 discordactivities.com
 discordapp.com
