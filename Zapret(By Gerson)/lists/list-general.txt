@@ -198,6 +198,7 @@ secure.footprint.net
 secure.llnwd.net
 roblox.qq.com
 roblox.cncloudflare-ech.com
+cloudflare-ech.com
 encryptedsni.com
 cloudflareaccess.com
 cloudflareapps.com
@@ -220,6 +221,7 @@ discord-attachments-uploads-prd.storage.googleapis.com
 storage.googleapis.com
 discord.app
 discord.co
+gateway.discord.gg
 discord.com
 discord.design
 discord.dev
@@ -247,6 +249,7 @@ betterttv.net
 7tv.app
 7tv.io
 localizeapi.com
+klipy.com
 github.com
 gist.github.com
 docs.github.com
@@ -279,3 +282,5 @@ scenexe2.io
 elb.the-ozone-project.com
 woomy.online
 makerworld.com
+gamebanana.com
+nexusmods.com
